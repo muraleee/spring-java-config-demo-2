@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="beanA" class="com.demo.spring.BeanA">
+		<constructor-arg type="com.demo.spring.BeanB" ref="beanB"></constructor-arg>
+	</bean>
+	
+	<bean id="beanB" class="com.demo.spring.BeanB">
+		<property name="beanC" ref="beanC"></property>
+	</bean>
+	
+	<bean id="beanC" class="com.demo.spring.BeanC">
+		<property name="myProperty" value="XML Configuration"></property>
+	</bean>
+</beans>
