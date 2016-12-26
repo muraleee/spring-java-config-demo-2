@@ -1,24 +1,15 @@
 package com.demo.spring;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-//<bean id="beanA" class="com.demo.spring.BeanA">
-//<constructor-arg type="com.demo.spring.BeanB" ref="beanB"></constructor-arg>
-//</bean>
-//
-//<bean id="beanB" class="com.demo.spring.BeanB">
-//<property name="beanC" ref="beanC"></property>
-//</bean>
-//
-//<bean id="beanC" class="com.demo.spring.BeanC">
-//<property name="myProperty" value="XML Configuration"></property>
-//</bean>
-
 @Configuration
+@ComponentScan("com.demo.spring")
 public class ApplicationConfig {
 
+	/*
 	@Bean
 	@Scope("prototype")
 	public BeanA beanA()
@@ -43,4 +34,5 @@ public class ApplicationConfig {
 		beanC.setMyProperty("Java Configuration");
 		return beanC;
 	}
+	*/
 }
